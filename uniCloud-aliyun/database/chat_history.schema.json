@@ -1,0 +1,73 @@
+{
+  "bsonType": "object",
+  "required": ["user_id", "chat_records"],
+  "permission": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "user_id": {
+      "bsonType": "string",
+      "description": "用户ID",
+      "title": "用户ID",
+      "foreignKey": "uni-id-users._id"
+    },
+    "chat_records": {
+      "bsonType": "array",
+      "description": "聊天记录数组",
+      "title": "聊天记录",
+      "items": {
+        "bsonType": "object",
+        "properties": {
+          "role": {
+            "bsonType": "string",
+            "description": "消息角色，user或assistant",
+            "title": "角色",
+            "enum": ["user", "assistant"]
+          },
+          "content": {
+            "bsonType": "string",
+            "description": "消息内容",
+            "title": "内容"
+          },
+          "timestamp": {
+            "bsonType": "timestamp",
+            "description": "消息时间戳",
+            "title": "时间戳"
+          },
+          "mode": {
+            "bsonType": "string",
+            "description": "消息模式，normal或professional",
+            "title": "模式",
+            "enum": ["normal", "professional"]
+          }
+        }
+      }
+    },
+    "last_message_time": {
+      "bsonType": "timestamp",
+      "description": "最后一条消息的时间戳",
+      "title": "最后消息时间"
+    },
+    "title": {
+      "bsonType": "string",
+      "description": "聊天会话标题",
+      "title": "会话标题"
+    },
+    "create_date": {
+      "bsonType": "timestamp",
+      "description": "创建时间",
+      "title": "创建时间"
+    },
+    "update_date": {
+      "bsonType": "timestamp",
+      "description": "更新时间",
+      "title": "更新时间"
+    }
+  }
+} 

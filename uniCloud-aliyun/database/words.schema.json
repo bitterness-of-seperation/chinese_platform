@@ -1,0 +1,121 @@
+{
+  "bsonType": "object",
+  "required": ["word", "pinyin", "translation", "word_type", "grammar_structure", "example_sentences", "level"],
+  "permission": {
+    "read": true,
+    "create": false,
+    "update": true,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "word": {
+      "bsonType": "string",
+      "description": "汉字",
+      "title": "汉字"
+    },
+    "pinyin": {
+      "bsonType": "string",
+      "description": "拼音",
+      "title": "拼音"
+    },
+    "translation": {
+      "bsonType": "string",
+      "description": "英文翻译",
+      "title": "英文翻译"
+    },
+    "word_type": {
+      "bsonType": "string",
+      "description": "词语类型",
+      "title": "词语类型",
+      "enum": ["Auxiliary words", "Measure words", "Verbs", "Nouns", "Adjectives", "Other"]
+    },
+    "level": {
+      "bsonType": "string",
+      "description": "单词所属级别",
+      "title": "所属级别",
+      "enum": ["HSK3", "HSK4", "HSK5", "HSK6", "Other"],
+      "defaultValue": "HSK3"
+    },
+    "grammar_structure": {
+      "bsonType": "object",
+      "description": "语法结构",
+      "properties": {
+        "level": {
+          "bsonType": "string",
+          "description": "HSK等级",
+          "enum": ["HSK1级", "HSK2级", "HSK3级", "HSK4级", "HSK5级", "HSK6级"]
+        },
+        "pattern": {
+          "bsonType": "string",
+          "description": "句型模式"
+        },
+        "notes": {
+          "bsonType": "string",
+          "description": "语法说明"
+        }
+      }
+    },
+    "example_sentences": {
+      "bsonType": "array",
+      "description": "例句",
+      "items": {
+        "bsonType": "object",
+        "properties": {
+          "chinese": {
+            "bsonType": "string",
+            "description": "中文例句"
+          },
+          "pinyin": {
+            "bsonType": "string",
+            "description": "例句拼音"
+          },
+          "english": {
+            "bsonType": "string",
+            "description": "英文翻译"
+          }
+        }
+      }
+    },
+    "difficulty": {
+      "bsonType": "int",
+      "description": "难度（1-5）",
+      "title": "难度",
+      "minimum": 1,
+      "maximum": 5,
+      "defaultValue": 3
+    },
+    "frequency": {
+      "bsonType": "int",
+      "description": "使用频率（1-5）",
+      "title": "使用频率",
+      "minimum": 1,
+      "maximum": 5,
+      "defaultValue": 3
+    },
+    "book_id": {
+      "bsonType": "string",
+      "description": "所属词书ID",
+      "foreignKey": "wordbooks._id"
+    },
+    "order": {
+      "bsonType": "int",
+      "description": "词书中的顺序",
+      "title": "顺序号",
+      "minimum": 1
+    },
+    "tags": {
+      "bsonType": "array",
+      "description": "标签",
+      "items": {
+        "bsonType": "string"
+      }
+    },
+    "create_date": {
+      "bsonType": "timestamp",
+      "description": "创建时间"
+    }
+  }
+} 

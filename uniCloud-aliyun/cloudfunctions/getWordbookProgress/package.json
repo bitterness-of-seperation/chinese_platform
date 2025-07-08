@@ -1,0 +1,12 @@
+{
+  "name": "getWordbookProgress",
+  "version": "1.0.0",
+  "description": "获取词书学习进度",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+} 

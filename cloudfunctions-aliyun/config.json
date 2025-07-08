@@ -1,0 +1,20 @@
+{
+  "spaceId": "your-space-id",
+  "functionRoot": "./functions",
+  "functions": [
+    {
+      "name": "login",
+      "handler": "index.main",
+      "timeout": 5,
+      "memorySize": 128,
+      "runtime": "nodejs12"
+    },
+    {
+      "name": "register",
+      "handler": "index.main",
+      "timeout": 5,
+      "memorySize": 128,
+      "runtime": "nodejs12"
+    }
+  ]
+} 

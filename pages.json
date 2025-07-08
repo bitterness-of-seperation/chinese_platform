@@ -1,0 +1,82 @@
+{
+	"pages": [ 
+		{
+			"path": "pages/Blank/Blank",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/Home/Home",
+			"style": {
+				"navigationBarTitleText": "智言汉语"
+			}
+		},
+		{
+			"path": "pages/Profile/Profile",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Assistant/Assistant",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Dictionary/Dictionary",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/WordExercise/WordExercise",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/WordProgress/WordProgress",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/WordLearning/WordLearning",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "智言汉语",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#10b981",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/Home/Home",
+				"text": "首页",
+				"iconPath": "static/home.png",
+				"selectedIconPath": "static/home-h.png"
+			},
+			{
+				"pagePath": "pages/Profile/Profile",
+				"text": "我的",
+				"iconPath": "static/self.png",
+				"selectedIconPath": "static/self-h.png"
+			}
+		]
+	},
+	"uniIdRouter": {}
+}

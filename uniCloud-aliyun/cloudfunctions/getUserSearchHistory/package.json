@@ -1,0 +1,12 @@
+{
+  "name": "getUserSearchHistory",
+  "version": "1.0.0",
+  "description": "获取用户词典搜索历史",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+} 

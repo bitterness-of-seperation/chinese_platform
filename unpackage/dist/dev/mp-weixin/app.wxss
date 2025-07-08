@@ -1,0 +1,43 @@
+
+.layout.data-v-9cab4b4c {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+
+	/*每个页面公共css */
+body {
+		margin: 0;
+		padding: 0;
+		font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		overflow-x: hidden;
+}
+
+	/* 在这里添加全局样式 */
+page {
+		font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+			Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+			sans-serif;
+		/* 定义全局CSS变量 */
+		--nav-bar-height: 88rpx;
+		--status-bar-height: 40rpx;
+		--safe-area-inset-top: var(--status-bar-height);
+		--content-padding-top: calc(var(--nav-bar-height) + var(--safe-area-inset-top));
+}
+
+	/* 去除按钮的默认边框 */
+button {
+		border: none !important;
+}
+button::after {
+		border: none;
+}
+	
+	/* 页面主内容 */
+.page-content {
+		margin-top: var(--content-padding-top);
+}
+page{--status-bar-height:25px;--top-window-height:0px;--window-top:0px;--window-bottom:0px;--window-left:0px;--window-right:0px;--window-magin:0px}[data-c-h="true"]{display: none !important;}

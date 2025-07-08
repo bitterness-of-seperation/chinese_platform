@@ -1,0 +1,33 @@
+{
+  "bsonType": "object",
+  "required": ["user_id", "date"],
+  "permission": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "user_id": {
+      "bsonType": "string",
+      "description": "用户ID",
+      "foreignKey": "uni-id-users._id"
+    },
+    "date": {
+      "bsonType": "timestamp",
+      "description": "签到日期"
+    },
+    "continuous_days": {
+      "bsonType": "int",
+      "description": "连续签到天数",
+      "minimum": 1
+    },
+    "create_date": {
+      "bsonType": "timestamp",
+      "description": "创建时间"
+    }
+  }
+} 

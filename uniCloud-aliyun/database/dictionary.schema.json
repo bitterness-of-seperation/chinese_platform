@@ -1,0 +1,129 @@
+{
+  "bsonType": "object",
+  "required": ["word", "pinyin", "basic_meaning", "core_usage", "common_mistakes"],
+  "permission": {
+    "read": true,
+    "create": false,
+    "update": true,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "word": {
+      "bsonType": "string",
+      "description": "汉字",
+      "title": "汉字"
+    },
+    "pinyin": {
+      "bsonType": "string",
+      "description": "拼音",
+      "title": "拼音"
+    },
+    "search_count": {
+      "bsonType": "int",
+      "description": "搜索次数",
+      "minimum": 0,
+      "defaultValue": 0
+    },
+    "basic_meaning": {
+      "bsonType": "object",
+      "description": "基本意义",
+      "properties": {
+        "title": {
+          "bsonType": "string",
+          "description": "标题"
+        },
+        "content": {
+          "bsonType": "string",
+          "description": "内容"
+        },
+        "english": {
+          "bsonType": "string",
+          "description": "英文翻译"
+        }
+      }
+    },
+    "core_usage": {
+      "bsonType": "object",
+      "description": "核心用法",
+      "properties": {
+        "title": {
+          "bsonType": "string",
+          "description": "标题"
+        },
+        "patterns": {
+          "bsonType": "array",
+          "description": "用法模式",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "title": {
+                "bsonType": "string",
+                "description": "用法类型"
+              },
+              "structure": {
+                "bsonType": "string",
+                "description": "语法结构"
+              },
+              "features": {
+                "bsonType": "array",
+                "description": "特点",
+                "items": {
+                  "bsonType": "string"
+                }
+              },
+              "examples": {
+                "bsonType": "array",
+                "description": "例句",
+                "items": {
+                  "bsonType": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "common_mistakes": {
+      "bsonType": "object",
+      "description": "常见偏误",
+      "properties": {
+        "title": {
+          "bsonType": "string",
+          "description": "标题"
+        },
+        "items": {
+          "bsonType": "array",
+          "description": "偏误项",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "type": {
+                "bsonType": "string",
+                "description": "错误类型"
+              },
+              "wrong": {
+                "bsonType": "string",
+                "description": "错误用法"
+              },
+              "correct": {
+                "bsonType": "string",
+                "description": "正确用法"
+              }
+            }
+          }
+        }
+      }
+    },
+    "create_date": {
+      "bsonType": "timestamp",
+      "description": "创建时间"
+    },
+    "update_date": {
+      "bsonType": "timestamp",
+      "description": "更新时间"
+    }
+  }
+} 

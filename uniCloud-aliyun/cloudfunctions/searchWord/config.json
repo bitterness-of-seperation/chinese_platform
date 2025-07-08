@@ -1,0 +1,9 @@
+{
+  "timeout": 90,
+  "memorySize": 512,
+  "path": "",
+  "name": "searchWord",
+  "description": "词语搜索云函数",
+  "triggers": [],
+  "version": "1.0.0"
+} 

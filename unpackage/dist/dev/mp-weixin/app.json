@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/Blank/Blank",
+    "pages/Home/Home",
+    "pages/Profile/Profile",
+    "pages/Assistant/Assistant",
+    "pages/Dictionary/Dictionary",
+    "pages/WordExercise/WordExercise",
+    "pages/WordProgress/WordProgress",
+    "pages/WordLearning/WordLearning"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "智言汉语",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#10b981",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/Home/Home",
+        "text": "首页",
+        "iconPath": "static/home.png",
+        "selectedIconPath": "static/home-h.png"
+      },
+      {
+        "pagePath": "pages/Profile/Profile",
+        "text": "我的",
+        "iconPath": "static/self.png",
+        "selectedIconPath": "static/self-h.png"
+      }
+    ]
+  },
+  "cloudfunctionTemplates": {
+    "scenarioExerciseAI": {
+      "timeout": 90,
+      "memorySize": 512
+    },
+    "searchWord": {
+      "timeout": 90,
+      "memorySize": 512
+    }
+  },
+  "usingComponents": {}
+}

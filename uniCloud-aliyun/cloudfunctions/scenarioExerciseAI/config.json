@@ -1,0 +1,9 @@
+{
+  "timeout": 120,
+  "memorySize": 512,
+  "path": "",
+  "name": "scenarioExerciseAI",
+  "description": "生成情景练习题的专用云函数",
+  "triggers": [],
+  "version": "1.0.0"
+} 

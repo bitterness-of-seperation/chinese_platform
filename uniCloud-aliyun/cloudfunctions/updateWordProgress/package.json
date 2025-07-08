@@ -1,0 +1,12 @@
+{
+  "name": "updateWordProgress",
+  "version": "1.0.0",
+  "description": "更新单词学习状态和词书进度",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+} 

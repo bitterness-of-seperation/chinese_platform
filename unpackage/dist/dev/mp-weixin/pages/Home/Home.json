@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "智言汉语",
+  "usingComponents": {
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "organic-background": "../../components/OrganicBackground"
+  }
+}

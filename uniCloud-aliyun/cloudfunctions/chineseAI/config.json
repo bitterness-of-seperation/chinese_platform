@@ -1,0 +1,9 @@
+{
+  "timeout": 120,
+  "memorySize": 512,
+  "path": "",
+  "name": "chineseAI",
+  "description": "中文AI助手，用于生成情景练习题",
+  "triggers": [],
+  "version": "1.0.0"
+} 

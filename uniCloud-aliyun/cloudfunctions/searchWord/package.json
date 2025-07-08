@@ -1,0 +1,9 @@
+{
+  "name": "searchWord",
+  "version": "1.0.0",
+  "description": "搜索词语云函数",
+  "main": "index.js",
+  "dependencies": {
+    "zhipuai": "^1.0.0"
+  }
+} 

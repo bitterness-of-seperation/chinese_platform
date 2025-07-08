@@ -1,0 +1,357 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+/* 颜色系统 */
+.data-v-46e5b566:root {
+  --primary-color: #67C23A;
+  --primary-dark: #5B8C00;
+  --text-primary: #303133;
+  --text-regular: #606266;
+  --text-secondary: #909399;
+  --border-color: #EBEEF5;
+  --card-bg: rgba(240, 249, 235, 0.9);
+  --card-hover-shadow: 0 12rpx 36rpx rgba(103, 194, 58, 0.12);
+  /* 新增颜色 */
+  --orange-color: #FF9A2F;
+  --blue-color: #58A8FF;
+  --red-color: #F56C6C;
+  --cyan-color: #36cfc9;
+  --purple-color: #9254de;
+  --yellow-color: #faad14;
+}
+
+/* 间距系统 */
+/* 容器样式 */
+.vocabulary-progress.data-v-46e5b566 {
+  min-height: 100vh;
+  padding: 32rpx;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 180rpx;
+}
+
+/* 导航栏 */
+.nav-bar.data-v-46e5b566 {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 32rpx;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(20rpx);
+          backdrop-filter: blur(20rpx);
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.05);
+  z-index: 100;
+  border-radius: 0 0 32rpx 32rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: var(--status-bar-height, 40rpx);
+}
+.nav-bar .page-title.data-v-46e5b566 {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.nav-bar .placeholder-space.data-v-46e5b566 {
+  width: 64rpx;
+}
+.nav-icon.data-v-46e5b566 {
+  font-size: 50rpx;
+  padding: 16rpx;
+  border-radius: 50%;
+  transition: all 0.3s;
+  color: var(--ep-color-success, #67C23A);
+}
+
+/* 卡片统一风格 */
+.book-card.data-v-46e5b566, .progress-card.data-v-46e5b566, .attendance-card.data-v-46e5b566, .today-card.data-v-46e5b566 {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24rpx;
+  margin-bottom: 32rpx;
+  transition: transform 0.3s, box-shadow 0.3s;
+  will-change: transform, box-shadow;
+  overflow: hidden;
+  border: none;
+  width: 100%;
+  padding: 32rpx;
+}
+
+/* 顶部双卡片 */
+.top-cards.data-v-46e5b566 {
+  display: flex;
+  gap: 24rpx;
+  margin-bottom: 24rpx;
+  margin-top: calc(88rpx + var(--status-bar-height, 40rpx));
+  /* 导航栏高度 + 状态栏高度 */
+}
+.top-cards .book-card.data-v-46e5b566, .top-cards .progress-card.data-v-46e5b566 {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 20rpx;
+}
+.top-cards .book-card .card-content.data-v-46e5b566, .top-cards .progress-card .card-content.data-v-46e5b566 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+/* 统一所有卡片标题样式 */
+.book-card .card-title.data-v-46e5b566,
+.progress-card .card-title.data-v-46e5b566,
+.attendance-card .card-title.data-v-46e5b566,
+.today-card .card-title.data-v-46e5b566 {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 32rpx;
+}
+
+/* 词书选择卡片 */
+.book-card.data-v-46e5b566 {
+  background: rgba(255, 247, 237, 0.9) !important;
+}
+.book-card .book-select.data-v-46e5b566 {
+  background: rgba(255, 247, 237, 0.9);
+  padding: 16rpx 24rpx;
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16rpx 0;
+}
+.book-card .book-select .book-name.data-v-46e5b566 {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: normal;
+}
+.book-card .book-info.data-v-46e5b566 {
+  margin-top: 16rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.book-card .book-info .word-count.data-v-46e5b566 {
+  font-size: 26rpx;
+  color: #666;
+}
+.book-card .book-info .start-btn.data-v-46e5b566 {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+/* 进度卡片 */
+.progress-card.data-v-46e5b566 {
+  background: rgba(236, 246, 255, 0.9) !important;
+}
+.progress-card .progress-info.data-v-46e5b566 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12rpx;
+  margin-top: 16rpx;
+  /* 进度百分比 */
+}
+.progress-card .progress-info .progress-value.data-v-46e5b566 {
+  font-size: 100rpx;
+  color: #2196F3;
+  font-weight: normal;
+  line-height: 1;
+}
+.progress-card .progress-info .words-learned.data-v-46e5b566 {
+  font-size: 26rpx;
+  color: #666;
+}
+.progress-card .progress-info .progress-percentage.data-v-46e5b566 {
+  margin-top: 24rpx;
+}
+.progress-card .progress-info .progress-percentage .progress-bar-container.data-v-46e5b566 {
+  width: 100%;
+  height: 20rpx;
+  background-color: #EBEEF5;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-bottom: 8rpx;
+}
+.progress-card .progress-info .progress-percentage .progress-bar-fill.data-v-46e5b566 {
+  height: 100%;
+  background-color: #2196F3;
+  transition: width 0.3s ease;
+}
+.progress-card .progress-info .progress-percentage .percentage-text.data-v-46e5b566 {
+  font-size: 24rpx;
+  color: #2196F3;
+  display: block;
+  text-align: right;
+}
+
+/* 打卡区卡片 */
+.attendance-card.data-v-46e5b566 {
+  background-color: #ffffff;
+  margin-right: 50rpx;
+}
+.attendance-card .attendance-header.data-v-46e5b566 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+.attendance-card .attendance-header .header-right .continuous-days.data-v-46e5b566 {
+  font-size: 28rpx;
+  color: var(--text-regular);
+}
+.attendance-card .attendance-header .header-right .continuous-days .days-count.data-v-46e5b566 {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.attendance-card .date-grid.data-v-46e5b566 {
+  display: flex;
+  justify-content: space-between;
+  gap: 16rpx;
+  flex-wrap: wrap;
+}
+.attendance-card .date-grid .date-item.data-v-46e5b566 {
+  text-align: center;
+  flex: 1;
+  min-width: calc(25% - 16rpx);
+  padding: 16rpx;
+  border-radius: 20rpx;
+  transition: all 0.3s ease;
+}
+.attendance-card .date-grid .date-item .date-day.data-v-46e5b566 {
+  font-size: 24rpx;
+  color: var(--text-regular);
+  margin-bottom: 12rpx;
+  background-color: transparent;
+  display: block;
+  text-align: center;
+}
+.attendance-card .date-grid .date-item .success-icon.data-v-46e5b566, .attendance-card .date-grid .date-item .missed-icon.data-v-46e5b566 {
+  font-size: 36rpx;
+  display: block;
+  margin: 0 auto;
+}
+.attendance-card .date-grid .date-item.completed.data-v-46e5b566 {
+  background-color: rgba(103, 194, 58, 0.15);
+}
+.attendance-card .date-grid .date-item.missed.data-v-46e5b566 {
+  background-color: rgba(245, 108, 108, 0.15);
+}
+
+/* 今日数据卡片 */
+.today-card.data-v-46e5b566 {
+  background-color: #ffffff;
+}
+.today-card .today-header.data-v-46e5b566 {
+  margin-bottom: 24rpx;
+}
+.today-card .today-grid.data-v-46e5b566 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200rpx, 1fr));
+  gap: 24rpx;
+}
+.today-card .today-grid .today-item.data-v-46e5b566 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24rpx;
+  border-radius: 16rpx;
+  background-color: rgba(240, 249, 235, 0.5);
+  text-align: center;
+}
+.today-card .today-grid .today-item .today-icon.data-v-46e5b566 {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16rpx;
+}
+.today-card .today-grid .today-item .today-icon .review-icon.data-v-46e5b566, .today-card .today-grid .today-item .today-icon .new-icon.data-v-46e5b566, .today-card .today-grid .today-item .today-icon .star-icon.data-v-46e5b566, .today-card .today-grid .today-item .today-icon .delete-icon.data-v-46e5b566, .today-card .today-grid .today-item .today-icon .study-icon.data-v-46e5b566, .today-card .today-grid .today-item .today-icon .app-icon.data-v-46e5b566 {
+  font-size: 48rpx;
+  color: white;
+}
+.today-card .today-grid .today-item .today-data .today-value.data-v-46e5b566 {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+.today-card .today-grid .today-item .today-data .today-value .unit.data-v-46e5b566 {
+  font-size: 28rpx;
+  margin-left: 4rpx;
+}
+.today-card .today-grid .today-item .today-data .today-label.data-v-46e5b566 {
+  font-size: 28rpx;
+  color: var(--text-secondary);
+  margin-top: 8rpx;
+}
+.today-card .today-grid .today-item.review .today-icon.data-v-46e5b566 {
+  background-color: var(--primary-color);
+}
+.today-card .today-grid .today-item.new .today-icon.data-v-46e5b566 {
+  background-color: var(--orange-color);
+}
+.today-card .today-grid .today-item.star .today-icon.data-v-46e5b566 {
+  background-color: var(--blue-color);
+}
+.today-card .today-grid .today-item.delete .today-icon.data-v-46e5b566 {
+  background-color: var(--red-color);
+}
+.today-card .today-grid .today-item.study .today-icon.data-v-46e5b566 {
+  background-color: var(--cyan-color);
+}
+.today-card .today-grid .today-item.app .today-icon.data-v-46e5b566 {
+  background-color: var(--purple-color);
+}
+
+/* Heatmap */
+.heatmap-container.data-v-46e5b566 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32rpx;
+}
+.heatmap-container .heatmap-title.data-v-46e5b566 {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-right: 16rpx;
+}
+.heatmap-container .heatmap-icon.data-v-46e5b566 {
+  width: 48rpx;
+  height: 48rpx;
+  background-color: var(--primary-color);
+  border-radius: 8rpx;
+}

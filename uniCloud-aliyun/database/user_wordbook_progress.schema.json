@@ -1,0 +1,58 @@
+{
+  "bsonType": "object",
+  "required": ["user_id", "wordbook_id", "learned_words"],
+  "permission": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "user_id": {
+      "bsonType": "string",
+      "description": "用户ID",
+      "foreignKey": "uni-id-users._id"
+    },
+    "wordbook_id": {
+      "bsonType": "string",
+      "description": "词书ID",
+      "foreignKey": "wordbooks._id"
+    },
+    "learned_words": {
+      "bsonType": "array",
+      "description": "已学习的单词ID列表",
+      "items": {
+        "bsonType": "string"
+      }
+    },
+    "favorite_words": {
+      "bsonType": "array",
+      "description": "收藏的单词ID列表",
+      "items": {
+        "bsonType": "string"
+      }
+    },
+    "is_exercised": {
+      "bsonType": "array",
+      "description": "已完成情景练习的单词ID列表",
+      "items": {
+        "bsonType": "string"
+      }
+    },
+    "last_study_date": {
+      "bsonType": "timestamp",
+      "description": "最后学习时间"
+    },
+    "create_date": {
+      "bsonType": "timestamp",
+      "description": "创建时间"
+    },
+    "update_date": {
+      "bsonType": "timestamp",
+      "description": "更新时间"
+    }
+  }
+} 

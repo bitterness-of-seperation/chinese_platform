@@ -1,0 +1,276 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+/* 全局CSS变量 */
+.data-v-7ffebbf4:root {
+  /* 光效和交互 */
+  --card-depth: 40rpx;
+  --transition-bouncy: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  --transition-smooth: cubic-bezier(0.4, 0.0, 0.2, 1);
+  /* 间距和尺寸 */
+  --grid-gap: 32rpx;
+  --container-padding: 48rpx;
+  --card-border-radius: 32rpx;
+  --touch-target-size: 96rpx;
+  /* 元素尺寸 */
+  --nav-height: 112rpx;
+  /* 色彩系统 */
+  --ep-color-primary: #10b981;
+  --ep-color-success: #34d399;
+  --ep-color-warning: #fbbf24;
+  --ep-color-info: #60a5fa;
+  --ep-color-danger: #f87171;
+  /* 背景色 */
+  --background: #f8f9fa;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+}
+
+/* 应用容器 */
+.app-container.data-v-7ffebbf4 {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: "Noto Sans SC", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 主内容区 */
+.main-content.data-v-7ffebbf4 {
+  position: relative;
+  z-index: 2;
+  padding: var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40rpx);
+  transition: opacity 0.8s var(--transition-smooth), transform 0.8s var(--transition-smooth);
+  will-change: transform, opacity;
+}
+.main-content.page-loaded.data-v-7ffebbf4 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 应用标题 */
+.app-title.data-v-7ffebbf4 {
+  font-size: 56rpx;
+  font-weight: 700;
+  margin-bottom: 64rpx;
+  text-align: center;
+  background: linear-gradient(135deg, var(--ep-color-success), var(--ep-color-primary));
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: titleEntrance-7ffebbf4 1.2s var(--transition-bouncy) both;
+  animation-delay: 0.2s;
+}
+.module-grid.data-v-7ffebbf4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32rpx;
+  padding: 32rpx;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* 模块卡片 */
+.module-card.data-v-7ffebbf4 {
+  position: relative;
+  height: 320rpx;
+  /* 10rem = 320rpx */
+  border-radius: var(--card-border-radius);
+  background-color: var(--card-bg);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  /* 兼容性考虑 */
+  /* cursor: pointer; */
+  /* 移除，移动端无光标 */
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.05);
+  /* 0.25rem = 8rpx, 0.75rem = 24rpx */
+  animation: moduleEntrance-7ffebbf4 0.8s var(--transition-bouncy) both;
+  animation-delay: var(--delay);
+  transform: rotateY(var(--rotate)) translateZ(0);
+  transition: all 0.4s var(--transition-bouncy);
+  -webkit-backdrop-filter: blur(16rpx);
+          backdrop-filter: blur(16rpx);
+  /* 0.5rem = 16rpx, 兼容性考虑 */
+  will-change: transform, box-shadow;
+  /* 确保至少48x48dp的触控区域 */
+  min-width: var(--touch-target-size);
+  min-height: var(--touch-target-size);
+  touch-action: manipulation;
+}
+
+/* 卡片内容 */
+.card-content.data-v-7ffebbf4 {
+  padding: 40rpx;
+  /* 1.25rem = 40rpx */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: translateZ(var(--card-depth));
+  will-change: transform;
+  position: relative;
+  z-index: 2;
+}
+
+/* 卡片高光 */
+.card-highlight.data-v-7ffebbf4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05) 60%, transparent 70%);
+  opacity: 0.7;
+  mix-blend-mode: overlay;
+  z-index: 1;
+}
+
+/* 图标容器 */
+.icon-container.data-v-7ffebbf4 {
+  width: 96rpx;
+  /* 3rem = 96rpx */
+  height: 96rpx;
+  /* 3rem = 96rpx */
+  border-radius: 24rpx;
+  /* 0.75rem = 24rpx */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--module-color);
+  margin-bottom: 24rpx;
+  /* 0.75rem = 24rpx */
+  transition: transform 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.module-icon.data-v-7ffebbf4 {
+  font-size: 48rpx;
+  /* 1.5rem = 48rpx */
+  color: white;
+}
+
+/* 标题和描述文本 */
+.module-title.data-v-7ffebbf4 {
+  font-size: 36rpx;
+  /* 1.125rem = 36rpx */
+  font-weight: 600;
+  margin: 0 0 16rpx;
+  /* 0.5rem = 16rpx */
+  color: var(--text-primary);
+}
+.module-description.data-v-7ffebbf4 {
+  font-size: 28rpx;
+  /* 0.875rem = 28rpx */
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* 焦点状态 - 符合WCAG 2.2 */
+.module-card.data-v-7ffebbf4:focus {
+  outline: none;
+  box-shadow: 0 0 0 6rpx white, 0 0 0 12rpx var(--module-color);
+}
+
+/* 活跃状态 */
+.module-card.data-v-7ffebbf4:active {
+  transform: scale(0.97);
+}
+
+/* 底部导航栏 (已在 pages.json 中配置) */
+/* .tab-bar { ... } */
+/* 动画定义 */
+@keyframes titleEntrance-7ffebbf4 {
+0% {
+    opacity: 0;
+    transform: translateY(-40rpx);
+    /* 1.25rem = 40rpx */
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+@keyframes moduleEntrance-7ffebbf4 {
+0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(40rpx) rotateY(var(--rotate));
+    /* 1.25rem = 40rpx */
+}
+100% {
+    opacity: 1;
+    transform: scale(1) translateY(0) rotateY(var(--rotate));
+}
+}
+/* 响应式调整 */
+@media (max-width: 800rpx) {
+  /* 25rem = 800rpx */
+.module-grid.data-v-7ffebbf4 {
+    gap: 24rpx;
+    /* 0.75rem = 24rpx */
+}
+.module-card.data-v-7ffebbf4 {
+    height: 280rpx;
+    /* 8.75rem = 280rpx */
+}
+.icon-container.data-v-7ffebbf4 {
+    width: 80rpx;
+    /* 2.5rem = 80rpx */
+    height: 80rpx;
+    /* 2.5rem = 80rpx */
+}
+.module-title.data-v-7ffebbf4 {
+    font-size: 32rpx;
+    /* 1rem = 32rpx */
+}
+.module-description.data-v-7ffebbf4 {
+    font-size: 24rpx;
+    /* 0.75rem = 24rpx */
+}
+}
+/* 平板和桌面视图优化 */
+@media (min-width: 1536rpx) {
+  /* 48rem = 1536rpx */
+.module-grid.data-v-7ffebbf4 {
+    grid-template-columns: repeat(2, 480rpx);
+    /* 15rem = 480rpx */
+    justify-content: center;
+}
+.module-card.data-v-7ffebbf4 {
+    height: 360rpx;
+    /* 11.25rem = 360rpx */
+}
+}

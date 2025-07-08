@@ -1,0 +1,237 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.blank-view-container.data-v-e600c21f {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 32rpx;
+}
+
+/* 登录部分样式 */
+.login-section.data-v-e600c21f {
+  width: 100%;
+  max-width: 600rpx;
+  padding: 48rpx;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 32rpx;
+  box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(20rpx);
+          backdrop-filter: blur(20rpx);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-header.data-v-e600c21f {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.title.data-v-e600c21f {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+.form-group.data-v-e600c21f {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.input.data-v-e600c21f {
+  width: 100%;
+  height: 45px;
+  padding: 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+}
+.submit-btn.data-v-e600c21f {
+  width: 100%;
+  height: 45px;
+  background: #10b981;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.submit-btn[disabled].data-v-e600c21f {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.switch-mode.data-v-e600c21f {
+  text-align: center;
+  margin-top: 15px;
+  color: #10b981;
+  font-size: 14px;
+}
+
+/* 个人资料部分样式 */
+.profile-section.data-v-e600c21f {
+  width: 100%;
+  max-width: 600rpx;
+  padding: 48rpx;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 32rpx;
+  box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(20rpx);
+          backdrop-filter: blur(20rpx);
+}
+.user-info.data-v-e600c21f {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32rpx;
+}
+.avatar.data-v-e600c21f {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  margin-right: 24rpx;
+}
+.user-details.data-v-e600c21f {
+  flex: 1;
+}
+.nickname.data-v-e600c21f {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8rpx;
+  display: block;
+}
+.username.data-v-e600c21f {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+}
+.stats-section.data-v-e600c21f {
+  display: flex;
+  justify-content: space-around;
+  margin: 32rpx 0;
+  padding: 24rpx 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.stat-item.data-v-e600c21f {
+  text-align: center;
+}
+.stat-value.data-v-e600c21f {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #10b981;
+  display: block;
+}
+.stat-label.data-v-e600c21f {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 8rpx;
+  display: block;
+}
+.menu-section.data-v-e600c21f {
+  margin: 32rpx 0;
+}
+.menu-item.data-v-e600c21f {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.menu-item.data-v-e600c21f:last-child {
+  border-bottom: none;
+}
+.menu-item text.data-v-e600c21f {
+  margin-left: 16rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.logout-btn.data-v-e600c21f {
+  width: 100%;
+  height: 45px;
+  background: #ef4444;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 32rpx;
+}
+
+/* 开发中页面样式 */
+.construction-notice.data-v-e600c21f {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 60rpx;
+  border-radius: 24rpx;
+  box-shadow: 0 16rpx 60rpx rgba(0, 0, 0, 0.1);
+  max-width: 800rpx;
+  animation: fadeIn-e600c21f 0.6s ease-out;
+}
+.icon.data-v-e600c21f {
+  font-size: 80rpx;
+  margin-bottom: 20rpx;
+  animation: bounce-e600c21f 2s infinite;
+}
+h2.data-v-e600c21f {
+  color: #555;
+  margin-bottom: 20rpx;
+  font-weight: 500;
+}
+.back-button.data-v-e600c21f {
+  display: inline-block;
+  padding: 15rpx 40rpx;
+  background: #10b981;
+  color: white;
+  text-decoration: none;
+  border-radius: 12rpx;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.back-button.data-v-e600c21f:active {
+  background: #059669;
+  transform: translateY(-4rpx);
+  box-shadow: 0 8rpx 24rpx rgba(16, 185, 129, 0.3);
+}
+@keyframes fadeIn-e600c21f {
+from {
+    opacity: 0;
+    transform: translateY(40rpx);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+@keyframes bounce-e600c21f {
+0%, 100% {
+    transform: translateY(0);
+}
+50% {
+    transform: translateY(-20rpx);
+}
+}
+.glass-effect.data-v-e600c21f {
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(20rpx);
+          backdrop-filter: blur(20rpx);
+}
