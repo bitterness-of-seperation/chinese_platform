@@ -1,6 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "pinia": "^3.0.3"
-  }
-}
